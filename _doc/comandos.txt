@@ -194,4 +194,12 @@ o valor da chave será 1234
 ---------------------------------
 Teste
 ---------------------------------
-npm i test --save-dev
+npm i jest --save-dev
+npm i supertest --save-dev
+
+change in pachage.json
+   "scripts": {
+      "test": "jest"
+   },
+   
+precisa ter a variável de ambiente NODE_ENV: development
