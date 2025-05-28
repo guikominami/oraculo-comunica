@@ -22,19 +22,8 @@ describe("/api/words", () => {
 
   describe("GET /", () => {
     it("should return all words", async () => {
-      console.log(dataWords);
-
-      for (const wordItem of dataWords) {
-        languageSearch = await Language.findOne({
-          name: wordItem.language,
-        });
-        console.log(languageSearch);
-
-        //  if (!wordSearch)
-        //    return res
-        //      .status(404)
-        //      .send(`The words with the given Id ${word} was not found.`);
-      }
+      const res = await request(server).get("/api/words");
+      expect(res.status).toBe(200);
     });
   });
 });
